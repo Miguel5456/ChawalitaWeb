@@ -1,0 +1,1250 @@
+/* =====================================================
+                        RESET
+===================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    font-family:"Poppins",sans-serif;
+
+    background:#1a1412;
+
+}
+
+
+/* =====================================================
+                        FONDO
+===================================================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top,
+    rgba(255,220,180,.18),
+    transparent 45%),
+
+    linear-gradient(
+
+    180deg,
+
+    #463029,
+
+    #2d1d18,
+
+    #181110
+
+    );
+
+    overflow:hidden;
+
+    z-index:-5;
+
+}
+
+
+/* =====================================================
+                    DESTELLOS
+===================================================== */
+
+.background::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(
+
+    rgba(255,255,255,.05) 1px,
+
+    transparent 1px
+
+    );
+
+    background-size:80px 80px;
+
+    opacity:.5;
+
+}
+
+
+/* =====================================================
+                        ESCENA
+===================================================== */
+
+.escena{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+/* =====================================================
+                        SOBRE
+===================================================== */
+
+.sobre{
+
+    position:relative;
+
+    width:430px;
+
+    height:280px;
+
+    cursor:pointer;
+
+    transform-style:preserve-3d;
+
+    transition:
+
+    transform .4s ease;
+
+}
+
+.sobre:hover{
+
+    transform:
+
+    translateY(-6px);
+
+}
+
+
+/* =====================================================
+                    CUERPO
+===================================================== */
+
+.cuerpo{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:10px;
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    #edd6b5,
+
+    #ddb88b
+
+    );
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.35),
+
+    inset 0 2px 15px rgba(255,255,255,.3);
+
+}
+
+
+/* =====================================================
+                    FRENTE
+===================================================== */
+
+.frente{
+
+    position:absolute;
+
+    inset:0;
+
+    clip-path:
+
+    polygon(
+
+    0 100%,
+
+    50% 50%,
+
+    100% 100%
+
+    );
+
+    background:
+
+    linear-gradient(
+
+    #f3dfc2,
+
+    #d9b283
+
+    );
+
+    z-index:8;
+
+}
+
+
+/* =====================================================
+                    SOLAPA
+===================================================== */
+
+.solapa{
+
+    position:absolute;
+
+    inset:0;
+
+    clip-path:
+
+    polygon(
+
+    0 0,
+
+    100% 0,
+
+    50% 58%
+
+    );
+
+    background:
+
+    linear-gradient(
+
+    #f7e7cb,
+
+    #d9b284
+
+    );
+
+    transform-origin:top;
+
+    transition:
+
+    transform .9s ease;
+
+    z-index:25;
+
+}
+
+
+/* =====================================================
+                TEXTO SOBRE
+===================================================== */
+
+.texto{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:40;
+
+    pointer-events:none;
+
+}
+
+.texto h2{
+
+    font-family:
+
+    "Great Vibes",
+
+    cursive;
+
+    font-size:52px;
+
+    font-weight:400;
+
+}
+
+.texto p{
+
+    margin-top:12px;
+
+    letter-spacing:2px;
+
+    font-size:14px;
+
+    opacity:.8;
+
+}
+
+
+/* =====================================================
+                    SELLO
+===================================================== */
+
+.sello{
+
+    position:absolute;
+
+    left:50%;
+
+    top:78%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:20;
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    circle,
+
+    #ff7aa5,
+
+    #d33f69
+
+    );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:32px;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.3);
+
+    z-index:30;
+
+}
+
+
+/* =====================================================
+                SOBRE ABIERTO
+===================================================== */
+
+.sobre.abierto .solapa{
+
+    transform:
+
+    rotateX(180deg);
+
+}
+
+
+/* =====================================================
+            DESAPARECER SOBRE
+===================================================== */
+
+.sobre.desaparecer{
+
+    animation:
+
+    desaparecerSobre
+
+    .7s forwards;
+
+}
+
+@keyframes desaparecerSobre{
+
+    to{
+
+        opacity:0;
+
+        transform:
+
+        scale(.9);
+
+        visibility:hidden;
+
+    }
+
+}
+
+/* =====================================================
+                    CARTA
+===================================================== */
+
+.carta{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:55px;
+
+    width:380px;
+
+    height:240px;
+
+    transform:
+        translateX(-50%)
+        translateY(120px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:20;
+
+    transition:
+
+        transform 1.3s cubic-bezier(.2,.8,.2,1),
+
+        width .9s ease,
+
+        height .9s ease,
+
+        opacity .5s ease,
+
+        box-shadow .8s ease;
+
+}
+
+
+/* =====================================================
+                CARTA SALIENDO
+===================================================== */
+
+.carta.saliendo{
+
+    opacity:1;
+
+    transform:
+        translateX(-50%)
+        translateY(-240px);
+
+}
+
+
+/* =====================================================
+                CARTA ABIERTA
+===================================================== */
+
+.carta.expandida{
+
+    position:fixed;
+
+    left:50%;
+
+    top:50%;
+
+    width:min(900px,92vw);
+
+    height:88vh;
+
+    transform:translate(-50%,-50%);
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+    z-index:9999;
+
+    
+
+}
+
+/* =====================================================
+                    PAPEL
+===================================================== */
+
+.papel{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:18px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:
+
+        70px
+        70px
+        90px;
+
+    background:
+
+        linear-gradient(
+
+            to bottom,
+
+            #fffefb,
+
+            #faf6ef,
+
+            #f5efe6
+
+        );
+
+    box-shadow:
+
+        0 35px 80px rgba(0,0,0,.35),
+
+        inset 0 0 0 1px rgba(0,0,0,.05);
+
+}
+
+
+/* =====================================================
+                TEXTURA PAPEL
+===================================================== */
+
+.papel::before{
+
+    content:"";
+
+    z-index:1;
+
+    inset:0;
+
+    pointer-events:none;
+
+    border-radius:18px;
+
+    background:
+
+        radial-gradient(
+
+            rgba(0,0,0,.03) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:12px 12px;
+
+    opacity:.35;
+
+}
+
+
+/* Luz superior */
+
+.papel::after{
+
+    content:"";
+
+    z-index:2;
+
+    inset:0;
+
+    pointer-events:none;
+
+    border-radius:18px;
+
+    background:
+
+        linear-gradient(
+
+            rgba(255,255,255,.45),
+
+            transparent 18%,
+
+            transparent 82%,
+
+            rgba(0,0,0,.05)
+
+        );
+
+}
+
+
+/* =====================================================
+                CONTENIDO
+===================================================== */
+
+article{
+
+    position:relative;
+
+    z-index:10;
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1s ease;
+
+}
+
+
+/* =====================================================
+                PÁRRAFOS
+===================================================== */
+
+article p{
+
+    font-family:
+
+        "Cormorant Garamond",
+
+        serif;
+
+    font-size:29px;
+
+    line-height:1.9;
+
+    color:#49352b;
+
+    text-align:justify;
+
+    margin-bottom:34px;
+
+}
+
+
+/* =====================================================
+                PRIMER PÁRRAFO
+===================================================== */
+
+article p:first-child{
+
+    margin-top:10px;
+
+}
+
+
+/* =====================================================
+                SCROLL
+===================================================== */
+
+.papel::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+.papel::-webkit-scrollbar-track{
+
+    background:#ece2d4;
+
+    border-radius:20px;
+
+}
+
+.papel::-webkit-scrollbar-thumb{
+
+    background:#c7a078;
+
+    border-radius:20px;
+
+}
+
+.papel::-webkit-scrollbar-thumb:hover{
+
+    background:#af845b;
+
+}
+
+
+/* Firefox */
+
+.papel{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#c7a078 #ece2d4;
+
+}
+
+/* =====================================================
+                    PREGUNTA
+===================================================== */
+
+.pregunta{
+
+    margin-top:90px;
+
+    padding-bottom:70px;
+
+    text-align:center;
+
+}
+
+.pregunta h1{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:74px;
+
+    font-weight:400;
+
+    color:#ff72a5;
+
+    text-shadow:
+
+        0 0 12px rgba(255,150,200,.45),
+
+        0 0 30px rgba(255,120,170,.25);
+
+    margin-bottom:45px;
+
+}
+
+
+/* =====================================================
+                    BOTONES
+===================================================== */
+
+.acciones{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.acciones button{
+
+    padding:16px 45px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:
+
+        transform .25s,
+
+        box-shadow .25s,
+
+        background .25s;
+
+}
+
+
+/* SI */
+
+#btnSi{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #ff8cb8,
+
+        #ff4d8d
+
+    );
+
+    color:white;
+
+    box-shadow:
+
+        0 12px 30px rgba(255,90,160,.35);
+
+}
+
+#btnSi:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 18px 40px rgba(255,90,160,.5);
+
+}
+
+
+/* NO */
+
+#btnNo{
+
+    background:#ececec;
+
+    color:#555;
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.15);
+
+}
+
+#btnNo:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/* =====================================================
+                CLICK BOTÓN
+===================================================== */
+
+.boton-click{
+
+    animation:clickBoton .45s ease;
+
+}
+
+@keyframes clickBoton{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    35%{
+
+        transform:scale(.88);
+
+    }
+
+    70%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+                    DESTELLO
+===================================================== */
+
+.destello{
+
+    position:fixed;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:white;
+
+    z-index:999999;
+
+    box-shadow:
+
+        0 0 18px white,
+
+        0 0 40px pink,
+
+        0 0 70px hotpink;
+
+    animation:destello .7s forwards;
+
+}
+
+@keyframes destello{
+
+    from{
+
+        opacity:1;
+
+        transform:
+
+        translate(-50%,-50%)
+
+        scale(.2);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:
+
+        translate(-50%,-50%)
+
+        scale(8);
+
+    }
+
+}
+
+
+/* =====================================================
+                    MODAL
+===================================================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.65);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:999999;
+
+}
+
+.modal.mostrar{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/* =====================================================
+                TARJETA
+===================================================== */
+
+.modal-card{
+
+    width:min(620px,92vw);
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.35);
+
+    animation:subir .45s ease;
+
+}
+
+@keyframes subir{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(40px)
+
+        scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0)
+
+        scale(1);
+
+    }
+
+}
+
+.modal-card h2{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:60px;
+
+    color:#ff5f98;
+
+    margin-bottom:18px;
+
+}
+
+.modal-card p{
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:30px;
+
+}
+
+#cerrarModal{
+
+    padding:14px 38px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    background:#ff6b9d;
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+#cerrarModal:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* =====================================================
+                    RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+    .carta.expandida{
+
+        width:94vw;
+
+        height:90vh;
+
+    }
+
+    .papel{
+
+        padding:50px;
+
+    }
+
+    article p{
+
+        font-size:24px;
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .sobre{
+
+        width:320px;
+
+        height:220px;
+
+    }
+
+    .texto h2{
+
+        font-size:40px;
+
+    }
+
+    .texto p{
+
+        font-size:12px;
+
+    }
+
+    .papel{
+
+        padding:35px;
+
+    }
+
+    article p{
+
+        font-size:20px;
+
+        line-height:1.8;
+
+    }
+
+    .pregunta h1{
+
+        font-size:52px;
+
+    }
+
+    .acciones{
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+    .acciones button{
+
+        width:220px;
+
+    }
+
+}
+
+@media(max-width:450px){
+
+    .papel{
+
+        padding:25px;
+
+    }
+
+    article p{
+
+        font-size:18px;
+
+    }
+
+    .pregunta h1{
+
+        font-size:42px;
+
+    }
+
+}
+
+/* ======================================
+        LLUVIA DE CORAZONES
+====================================== */
+
+.corazon{
+
+    position:fixed;
+
+    top:-40px;
+
+    font-size:22px;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:999999;
+
+    animation:caerCorazon linear forwards;
+
+    filter:drop-shadow(0 0 10px rgba(255,120,170,.6));
+
+}
+
+@keyframes caerCorazon{
+
+    0%{
+
+        transform:
+            translateY(-50px)
+            rotate(0deg)
+            scale(.5);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(110vh)
+            rotate(720deg)
+            scale(1.2);
+
+        opacity:0;
+
+    }
+
+}

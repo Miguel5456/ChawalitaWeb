@@ -1,0 +1,797 @@
+
+/* ======================================
+            FONDO
+====================================== */
+
+body{
+
+    background:
+    radial-gradient(
+        circle at top left,
+        rgb(245,223,255),
+        white 70%
+    );
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ======================================
+            CONTENEDOR
+====================================== */
+
+main{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:140px 20px 100px;
+
+}
+
+
+/* ======================================
+        PANTALLA INICIAL
+====================================== */
+
+.pantallaInicio{
+
+    width:100%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:35px;
+
+    padding:70px 60px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    animation:entrada 1s ease;
+
+}
+
+
+/* ======================================
+            TITULO
+====================================== */
+
+.pantallaInicio h1{
+
+    font-size:3.5rem;
+
+    color:#50365d;
+
+    margin-bottom:30px;
+
+}
+
+
+.pantallaInicio p{
+
+    font-size:1.15rem;
+
+    color:#5b5b5b;
+
+    line-height:2;
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+
+/* ======================================
+        BOTON COMENZAR
+====================================== */
+
+#btnComenzar{
+
+    margin-top:50px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#dba2ff;
+
+    color:white;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 8px 25px rgba(219,162,255,.35);
+
+}
+
+
+#btnComenzar:hover{
+
+    transform:translateY(-5px);
+
+    background:#cf8cff;
+
+    box-shadow:0 15px 30px rgba(219,162,255,.45);
+
+}
+
+
+/* ======================================
+        OCULTAR ELEMENTOS
+====================================== */
+
+.oculto{
+
+     display:none !important;
+
+}
+
+
+.ocultar-navbar{
+
+    transform:translate(-50%,-120px)!important;
+
+    opacity:0;
+
+    transition:.8s;
+
+}
+
+
+.ocultar-footer{
+
+    transform:translateY(120px);
+
+    opacity:0;
+
+    transition:.8s;
+
+}
+
+
+.desaparecer{
+
+    opacity:0;
+
+    transform:translateY(-25px);
+
+    pointer-events:none;
+
+    transition:.6s;
+
+}
+
+
+/* ======================================
+        ANIMACION ENTRADA
+====================================== */
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ======================================
+            PANTALLA JUEGO
+====================================== */
+
+.pantallaJuego{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:fadeJuego .8s ease;
+
+}
+
+
+/* ======================================
+            TURNO
+====================================== */
+
+.turno{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.turno h2{
+
+    font-size:1.4rem;
+
+    color:#7d4b8c;
+
+    font-weight:400;
+
+    margin-bottom:5px;
+
+}
+
+.turno h1{
+
+    font-size:2.6rem;
+
+    color:#4d2c4d;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+/* ======================================
+            CARTAS
+====================================== */
+
+.cartas{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ======================================
+            CARTA
+====================================== */
+
+.carta{
+
+    width:240px;
+
+    height:320px;
+
+    border-radius:25px;
+
+    background:white;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+/* ======================================
+        ICONO CARTA
+====================================== */
+
+.carta h2{
+
+    font-size:5rem;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ======================================
+        TITULO CARTA
+====================================== */
+
+.carta h1{
+
+    font-size:2.4rem;
+
+    color:#50365d;
+
+    letter-spacing:3px;
+
+}
+
+
+/* ======================================
+        EFECTO HOVER
+====================================== */
+
+.carta:hover{
+
+    transform:
+
+        translateY(-12px)
+
+        scale(1.04);
+
+    box-shadow:
+
+        0 30px 55px rgba(0,0,0,.18);
+
+}
+
+
+/* ======================================
+        EFECTO CLICK
+====================================== */
+
+.carta:active{
+
+    transform:
+
+        scale(.96);
+
+}
+
+
+/* ======================================
+        ANIMACION APARICION
+====================================== */
+
+@keyframes aparecerCartas{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(40px)
+
+            scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0)
+
+            scale(1);
+
+    }
+
+}
+
+.cartas{
+
+    animation:
+
+        aparecerCartas
+
+        .8s ease;
+
+}
+
+
+/* ======================================
+        CARTA SELECCIONADA
+====================================== */
+
+.carta.seleccionada{
+
+    transform:
+
+        scale(1.08);
+
+    box-shadow:
+
+        0 35px 70px rgba(219,162,255,.45);
+
+}
+
+
+/* ======================================
+        CARTAS DESAPARECER
+====================================== */
+
+.cartas.ocultar{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+    pointer-events:none;
+
+    transition:.5s;
+
+}
+
+
+/* ======================================
+        ANIMACION GENERAL
+====================================== */
+
+@keyframes fadeJuego{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ======================================
+        PANEL PREGUNTA
+====================================== */
+
+.panelPregunta{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin-top:60px;
+
+    padding:50px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    animation:mostrarPregunta .6s ease;
+
+}
+
+
+/* ======================================
+        TIPO PREGUNTA
+====================================== */
+
+#tipoPregunta{
+
+    display:inline-block;
+
+    padding:10px 30px;
+
+    border-radius:50px;
+
+    background:#e6b6ff;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* ======================================
+        TEXTO
+====================================== */
+
+#textoPregunta{
+
+    font-size:2rem;
+
+    color:#4c3458;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+
+/* ======================================
+        BOTON CUMPLIDO
+====================================== */
+
+#btnCumplido{
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#9900ff;
+
+    color:white;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(220,168,255,.35);
+
+}
+
+
+#btnCumplido:hover{
+
+    transform:translateY(-5px);
+
+    background:#cd89ff;
+
+    box-shadow:0 18px 35px rgba(220,168,255,.45);
+
+}
+
+
+#btnCumplido:active{
+
+    transform:scale(.96);
+
+}
+
+
+/* ======================================
+        MOSTRAR PANEL
+====================================== */
+
+.panelPregunta.mostrar{
+
+    display:block;
+
+}
+
+
+.panelPregunta.oculto{
+
+    display:none;
+
+}
+
+
+/* ======================================
+        ANIMACION PANEL
+====================================== */
+
+@keyframes mostrarPregunta{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(30px)
+
+            scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0)
+
+            scale(1);
+
+    }
+
+}
+
+
+/* ======================================
+        RESPONSIVE
+====================================== */
+
+@media(max-width:900px){
+
+    .pantallaInicio{
+
+        padding:45px 30px;
+
+    }
+
+    .pantallaInicio h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .turno h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .cartas{
+
+        gap:35px;
+
+    }
+
+    .carta{
+
+        width:270px;
+
+        height:360px;
+
+    }
+
+    .carta h1{
+
+        font-size:2rem;
+
+    }
+
+    .carta h2{
+
+        font-size:4rem;
+
+    }
+
+    #textoPregunta{
+
+        font-size:1.45rem;
+
+    }
+
+    .panelPregunta{
+
+        padding:35px 25px;
+
+    }
+
+}
+
+
+/* ======================================
+        EFECTOS EXTRA
+====================================== */
+
+.carta,
+#btnComenzar,
+#btnCumplido{
+
+    transition:
+
+        transform .35s,
+
+        box-shadow .35s,
+
+        background .35s,
+
+        opacity .35s;
+
+}
+
+
+/* ======================================
+        DESACTIVAR SELECCION
+====================================== */
+
+.carta,
+button{
+
+    user-select:none;
+
+}
+
+
+/* ======================================
+        CURSOR
+====================================== */
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ==========================
+        BOTÓN SALIR
+========================== */
+
+#btnSalir{
+
+    margin-top:20px;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#ffffff67;
+
+    color:rgba(0, 0, 0, 0.386);
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(199,109,223,.35);
+
+}
+
+#btnSalir:hover{
+
+    transform:translateY(-3px);
+
+    background:#b85fd17a;
+
+}   
+
+#btnSalir:active{
+
+    transform:scale(.97);
+
+}

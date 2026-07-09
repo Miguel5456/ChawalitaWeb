@@ -1,0 +1,2472 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+}
+
+.navbar{
+    position:fixed;
+
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:90%;
+    max-width:1400px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 35px;
+
+    background:rgba(229, 192, 255, 0.65);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.10);
+
+    z-index:1000;
+}
+
+.logo img{
+    height:45px;
+    width:45px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+
+    color:#482c4d;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+.nav-links a{
+    position:relative;
+}
+
+.nav-links a::after{
+    content:'';
+
+    position:absolute;
+
+    left:0;
+    bottom:-5px;
+
+    width:0;
+    height:2px;
+
+    background:white;
+
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+#hero{
+    height:100vh;
+
+    background-image:url("../Galeria/Camila1.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+#hero::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.35);
+}
+#hero::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.35);
+}
+.hero-overlay{
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    color:white;
+}
+.hero-overlay h1{
+    font-size:5rem;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+}
+.hero-overlay p{
+    margin-top:20px;
+
+    font-size:1.3rem;
+
+    font-weight:300;
+}
+
+.hero-btn{
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    background:white;
+
+    color:#bb6ad4;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+.hero-overlay{
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+.perfil-camila{
+    text-align:center;
+}
+
+.titulo-container{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.titulo-container::before{
+    content:"──────── ❤ ────────";
+    display:block;
+    color:#e98fff;
+    font-size:1.2rem;
+    margin-bottom:15px;
+}
+
+.titulo-container::after{
+    content:"──────── ❤ ────────";
+    display:block;
+    color:#e98fff;
+    font-size:1.2rem;
+    margin-top:15px;
+}
+
+.titulo-seccion{
+    font-size:3rem;
+    font-weight:600;
+    color:#432c4d;
+    margin:0;
+}
+
+.perfil-camila{
+    text-align:center;
+}
+
+.perfil-camila img{
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+#sobre-camila{
+    background:
+    radial-gradient(
+        circle at top left,
+        rgb(238, 192, 255),
+        transparent 80%
+    );
+}
+#sobre-camila{
+    min-height:100vh;
+}
+.descripcion-camila{
+
+    max-width:800px;
+
+    margin:30px auto;
+
+    text-align:center;
+
+    line-height:1.8;
+
+    color:#555;
+}
+
+.cards-camila{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(2, 1fr);
+
+    gap:20px;
+
+    padding:20px;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+}
+
+
+.cards-camila{
+
+    width:100vw;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:0;
+
+    margin-top:50px;
+}
+
+.card{
+    position:relative;
+
+    width:100%;
+
+    height:500px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.card-front{
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.25);
+
+    color:white;
+
+    font-size:2rem;
+
+    font-weight:600;
+
+    transition:.5s;
+}
+
+.card-back{
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    background:rgba(245, 182, 255, 0.92);
+
+    color:#4d2c37;
+
+    opacity:0;
+
+    transition:.5s;
+}
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.card:hover .card-front{
+    opacity:0;
+}
+
+.card:hover .card-back{
+    opacity:1;
+}
+
+
+#timeline{
+    padding:100px 0;
+    background:#fff5f8;
+    position:relative;
+}
+
+
+
+.timeline{
+    position:relative;
+    max-width:1400px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:0;
+
+    width:4px;
+    height:100%;
+
+    background:#e9b6ff;
+
+    transform:translateX(-50%);
+}
+
+
+.timeline-item{
+    display:grid;
+
+    grid-template-columns:1fr 100px 1fr;
+
+    align-items:center;
+
+    margin:80px 0;
+
+    position:relative;
+}
+
+
+.timeline-icon{
+
+    width:60px;
+    height:60px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:1.8rem;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    z-index:2;
+}
+
+
+.timeline-content{
+    padding:20px;
+}
+
+
+
+.timeline-content img{
+
+    width:100%;
+
+    max-width:500px;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.4s;
+}
+
+.timeline-content img:hover{
+    transform:scale(1.03);
+}
+
+
+.timeline-content h3{
+
+    font-size:2rem;
+
+    color:#4d2c37;
+
+    margin-bottom:10px;
+}
+
+.timeline-content span{
+
+    display:block;
+
+    color:#e98fff;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+.timeline-content p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    font-size:1rem;
+}
+
+.izquierda{
+    text-align:right;
+}
+
+.derecha{
+    text-align:left;
+}
+
+
+.texto{
+    max-width:500px;
+}
+
+.texto.izquierda{
+    margin-left:auto;
+}
+
+
+@media(max-width:900px){
+
+    .timeline::before{
+        left:30px;
+    }
+
+    .timeline-item{
+
+        grid-template-columns:60px 1fr;
+
+        gap:20px;
+    }
+
+    .timeline-icon{
+        grid-column:1;
+    }
+
+    .timeline-content{
+
+        grid-column:2;
+
+        text-align:left !important;
+
+        margin:0 !important;
+    }
+
+    .timeline-content img{
+        height:250px;
+    }
+}
+
+.frase-final{
+
+    min-height:40vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#fff5f8;
+
+    text-align:center;
+
+    padding:50px;
+}
+
+.maquina-escribir{
+
+    max-width:900px;
+
+    font-size:2rem;
+
+    color:#4d2c4a;
+
+    font-weight:500;
+
+    line-height:1.6;
+}
+
+.cursor{
+
+    animation:parpadeo 0.8s infinite;
+}
+
+@keyframes parpadeo{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+.footer{
+
+    width:70%;
+    max-width:900px;
+
+    margin:40px auto 25px auto;
+
+    padding:12px 25px;
+
+    background:rgba(229, 192, 255, 0.65);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.10);
+
+    text-align:center;
+
+    color:#4d2c37;
+}
+
+.footer h3{
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    margin-bottom:2px;
+}
+
+.footer p{
+
+    font-size:0.8rem;
+
+    opacity:0.85;
+
+    margin-bottom:4px;
+}
+
+.footer span{
+
+    font-size:0.75rem;
+
+    opacity:0.7;
+}
+
+#foto-destacada{
+
+    height:85vh;
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:100px auto 50px auto;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    position:relative;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.destacada-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:30px;
+}
+
+.destacada-overlay h1{
+
+    font-size:4rem;
+
+    margin-bottom:15px;
+}
+
+.destacada-overlay p{
+
+    font-size:1.2rem;
+
+    max-width:700px;
+
+    line-height:1.7;
+}
+
+.galeria-slider{
+
+    width:90%;
+
+    margin:auto;
+
+    padding:80px 0;
+}
+
+.slider-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+.slider{
+
+    display:flex;
+
+    gap:20px;
+
+    overflow:hidden;
+
+    scroll-behavior:smooth;
+
+    width:100%;
+}
+
+.slider img{
+
+    min-width:350px;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.slider img:hover{
+
+    transform:scale(1.05);
+}
+
+.slider-btn{
+
+    width:55px;
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,192,203,.7);
+
+    backdrop-filter:blur(10px);
+
+    cursor:pointer;
+
+    font-size:1.4rem;
+
+    color:#4d2c37;
+
+    transition:.3s;
+}
+
+.slider-btn:hover{
+
+    transform:scale(1.1);
+}
+
+/* MODAL */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.9);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.modal.activo{
+
+    display:flex;
+}
+
+.modal-img{
+
+    max-width:90%;
+
+    max-height:85vh;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.cerrar{
+
+    position:absolute;
+
+    top:30px;
+    right:40px;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+}
+
+.recuerdos{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 0;
+}
+
+.acordeon-item{
+
+    margin-bottom:20px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:white;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.acordeon-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:rgba(229, 192, 255, 0.65);
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:1.1rem;
+
+    font-family:'Poppins', sans-serif;
+
+    color:#4d2c37;
+}
+
+.icono{
+
+    transition:.3s;
+}
+
+.acordeon-contenido{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .5s ease;
+
+    background:white;
+}
+
+.acordeon-contenido p{
+
+    padding:25px;
+
+    color:#555;
+
+    line-height:1.8;
+}
+
+.mini-galeria{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:25px;
+
+    flex-wrap:wrap;
+}
+
+.mini-galeria img,
+.mini-galeria video{
+
+    width:250px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+.mini-galeria img:hover,
+.mini-galeria video:hover{
+
+    transform:scale(1.03);
+}
+
+
+
+#hero-examen{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:120px 20px;
+
+    background:
+    linear-gradient(
+        rgba(229, 192, 255, 0.336),
+        rgba(229, 192, 255, 0.65)
+    ); 
+}
+
+.hero-examen-overlay{
+
+    width:90%;
+
+    max-width:900px;
+
+    padding:50px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.hero-examen h1{
+
+    font-size:3.5rem;
+
+    color:#4d2c37;
+
+    margin-bottom:15px;
+}
+
+.subtitulo-examen{
+
+    font-size:1.2rem;
+
+    color:#6d4a57;
+
+    margin-bottom:40px;
+}
+
+.caja-instrucciones{
+
+    text-align:left;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    margin-bottom:40px;
+}
+
+.caja-instrucciones h2{
+
+    color:#4d2c37;
+
+    margin-bottom:15px;
+}
+
+.caja-instrucciones ul{
+
+    padding-left:20px;
+
+    line-height:2;
+}
+
+.btn-examen{
+
+    display:inline-block;
+
+    padding:15px 40px;
+
+    background:#f3b6ff;
+
+    color:#4d2c37;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    border-radius:50px;
+
+    transition:.3s;
+}
+
+.btn-examen:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(233, 182, 255, 0.4);
+}
+
+#preguntas{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:100px 0;
+}
+
+.pregunta-card{
+
+    background:white;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(77,59,99,.08);
+
+    border:1px solid rgba(205,180,219,.35);
+}
+
+.pregunta-card h3{
+
+    color:#4d3b63;
+
+    margin-bottom:15px;
+}
+
+.pregunta-card p{
+
+    margin-bottom:20px;
+
+    font-size:1.1rem;
+
+    color:#555;
+}
+
+.pregunta-card label{
+
+    display:block;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+
+    padding:12px 15px;
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+.pregunta-card label:hover{
+
+    background:#f7f3fc;
+}
+
+.pregunta-card input{
+
+    margin-right:10px;
+
+    accent-color:#b8a0d9;
+}
+
+#calcular-nota{
+
+    display:block;
+
+    margin:50px auto;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#cdb4db;
+
+    color:#4d3b63;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#calcular-nota:hover{
+
+    transform:translateY(-3px);
+
+    background:#b8a0d9;
+
+    box-shadow:0 8px 20px rgba(184,160,217,.35);
+}
+
+#resultado{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    padding:30px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(77,59,99,.08);
+
+    color:#4d3b63;
+}
+
+.pregunta-card{
+
+    background:rgba(255,255,255,.7);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.barra-progreso{
+
+    width:100%;
+
+    max-width:500px;
+
+    height:25px;
+
+    margin:0 auto;
+
+    background:#e8e0f2;
+
+    border-radius:50px;
+
+    overflow:hidden;
+}
+
+.barra{
+
+    height:100%;
+
+    background:#b8a0d9;
+
+    transition:1s;
+}
+
+#preguntas{
+
+    display:none;
+}
+
+#cronometro{
+
+    margin-top:25px;
+
+    font-size:2rem;
+
+    font-weight:600;
+
+    color:#4d3b63;
+}
+
+#countdown-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+#countdown-modal.activo{
+
+    display:flex;
+}
+
+.countdown-box{
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    text-align:center;
+}
+
+#countdown{
+
+    font-size:5rem;
+
+    font-weight:bold;
+
+    margin-top:20px;
+
+    color:#4d3b63;
+}
+
+/* ==========================
+   BRILLITOS
+========================== */
+
+.sparkle{
+
+    position:fixed;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#d9b8ff;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    animation:sparkle .8s linear forwards;
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translateY(-20px)
+        scale(0);
+
+    }
+
+}
+
+
+/* ==========================
+   CORAZONES
+========================== */
+
+.heart{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    font-size:20px;
+
+    z-index:99999;
+
+    animation:heart .9s ease-out forwards;
+}
+
+.butterfly{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    animation:volar 2.5s ease-out forwards;
+
+    filter:drop-shadow(0 0 6px rgba(255,255,255,.6));
+}
+
+@keyframes volar{
+
+    0%{
+
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg)
+            scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% - 60px)
+            )
+            rotate(10deg)
+            scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% - 150px)
+            )
+            rotate(-10deg)
+            scale(.6);
+
+    }
+
+}
+
+/*======================================
+            HERO DEUDAS
+======================================*/
+
+#hero-deudas{
+
+    width:90%;
+
+    max-width:1400px;
+
+    height:85vh;
+
+    margin:100px auto 60px auto;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:linear-gradient(
+        135deg,
+        #f5f0ff,
+        #e7dcfa,
+        #d8c2f2,
+        #cdb4db
+    );
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.12);
+
+}
+
+/*======================================
+        CONTENIDO HERO
+======================================*/
+
+.hero-deudas-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+    padding:70px;
+
+}
+
+/*======================================
+            TEXTO
+======================================*/
+
+.hero-texto{
+
+    flex:1;
+
+}
+
+.badge-financiero{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(10px);
+
+    color:#6b5a86;
+
+    font-weight:600;
+
+    font-size:.95rem;
+
+    margin-bottom:25px;
+
+    border:1px solid rgba(255,255,255,.4);
+
+}
+
+.hero-texto h1{
+
+    font-size:4rem;
+
+    color:#4d3b63;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+}
+
+.descripcion-deudas{
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    color:#5f5276;
+
+    max-width:650px;
+
+    margin-bottom:45px;
+
+}
+
+/*======================================
+            BOTON
+======================================*/
+
+.btn-deudas{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#8d72c9;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:
+        0 10px 25px rgba(141,114,201,.35);
+
+}
+
+.btn-deudas:hover{
+
+    background:#7a5fbb;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(141,114,201,.45);
+
+}
+
+/*======================================
+            FOTO
+======================================*/
+
+.hero-imagen{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Marco tipo Polaroid */
+
+.hero-imagen img{
+
+    width:100%;
+
+    max-width:350px;
+
+    background:white;
+
+    padding:15px 15px 45px 15px;
+
+    border-radius:10px;
+
+    object-fit:cover;
+
+    transform:rotate(-4deg);
+
+    transition:.45s;
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.20);
+
+}
+
+.hero-imagen img:hover{
+
+    transform:
+        rotate(0deg)
+        scale(1.04);
+
+}
+
+/*======================================
+        RESPONSIVE
+======================================*/
+
+@media(max-width:950px){
+
+    #hero-deudas{
+
+        height:auto;
+
+    }
+
+    .hero-deudas-overlay{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:60px 35px;
+
+    }
+
+    .hero-texto{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .hero-texto h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .descripcion-deudas{
+
+        max-width:100%;
+
+    }
+
+    .hero-imagen img{
+
+        max-width:330px;
+
+        margin-top:20px;
+
+    }
+
+}
+
+/*======================================
+        RESUMEN FINANCIERO
+======================================*/
+
+#estado-cuenta{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:80px auto;
+
+}
+
+.resumen-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+/*======================================
+            TARJETAS
+======================================*/
+
+.resumen-card{
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:25px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.resumen-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.12);
+
+}
+
+/*======================================
+            ICONO
+======================================*/
+
+.resumen-card h3{
+
+    font-size:2.8rem;
+
+    margin-bottom:18px;
+
+}
+
+/*======================================
+            NUMERO
+======================================*/
+
+.resumen-card h2{
+
+    font-size:3rem;
+
+    color:#6f52a8;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+/*======================================
+            TEXTO
+======================================*/
+
+.resumen-card p{
+
+    color:#5d4c78;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+}
+
+/*======================================
+        RESPONSIVE
+======================================*/
+
+@media(max-width:768px){
+
+    .resumen-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+.resumen-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.resumen-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        #cdb4db,
+        #b8a2eb,
+        #d8c2f2
+    );
+
+}
+
+/*======================================
+            LISTA DE DEUDAS
+======================================*/
+
+#lista-deudas{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:80px auto;
+
+}
+
+.contenedor-deudas{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+/*======================================
+            CARD
+======================================*/
+
+.deuda-card{
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:25px;
+
+    padding:28px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.deuda-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.12);
+
+}
+
+/*======================================
+            ENCABEZADO
+======================================*/
+
+.deuda-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.deuda-header h3{
+
+    color:#4d3b63;
+
+    font-size:1.35rem;
+
+    font-weight:600;
+
+}
+
+/*======================================
+            ESTADOS
+======================================*/
+
+.estado{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+/* Pendiente */
+
+.estado.pendiente{
+
+    background:#efe7ff;
+
+    color:#7b4fd3;
+
+}
+
+/* Pagado */
+
+.estado.pagado{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+/* En Curso */
+
+.estado.en-curso{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+/* Infinito */
+
+.estado.infinito{
+
+    background:#ffe4e6;
+
+    color:#dc2626;
+
+}
+
+/*======================================
+            DESCRIPCIÓN
+======================================*/
+
+.deuda-descripcion{
+
+    color:#5d4c78;
+
+    line-height:1.8;
+
+    margin:25px 0;
+
+    font-size:1rem;
+
+}
+
+/*======================================
+            BOTÓN
+======================================*/
+
+.btn-pagar{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:#8d72c9;
+
+    color:white;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-pagar:hover{
+
+    background:#7354b8;
+
+    transform:translateY(-2px);
+
+}
+
+/*======================================
+        BOTÓN DESHABILITADO
+======================================*/
+
+.btn-pagar:disabled{
+
+    background:#bdb7ca;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+/* ==========================
+   FORMULARIO DE DEUDAS
+========================== */
+
+.form-deudas {
+    background: linear-gradient(135deg, #ffffff, #f7f7ff);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.form-deudas input {
+    flex: 1 1 45%;
+    padding: 12px 14px;
+
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* efecto focus suave */
+.form-deudas input:focus {
+    border-color: #7c5cff;
+    box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.15);
+}
+
+/* ==========================
+   BOTÓN CREAR
+========================== */
+
+.form-deudas button {
+    flex: 1 1 100%;
+
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #7c5cff, #5a3dff);
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* hover del botón */
+.form-deudas button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(124, 92, 255, 0.3);
+}
+
+/* click */
+.form-deudas button:active {
+    transform: scale(0.98);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 600px) {
+    .form-deudas input {
+        flex: 1 1 100%;
+    }
+}
+
+.form-deudas select {
+    flex: 1 1 45%;
+    padding: 12px 14px;
+
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    outline: none;
+    background: white;
+
+    transition: all 0.2s ease;
+
+    cursor: pointer;
+}
+
+/* focus bonito */
+.form-deudas select:focus {
+    border-color: #7c5cff;
+    box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.15);
+}
+
+/* ==========================
+   BOTONES (ESTILO NAVBAR)
+========================== */
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* BOTÓN BASE GLASS */
+.botones button {
+    flex: 1 1 45%;
+
+    padding: 10px 12px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    background: rgba(229, 192, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #4b2c57;
+    font-weight: 600;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================
+   HOVER MORADO TIPO NAVBAR
+========================== */
+
+.botones button:hover {
+    background: rgba(187, 106, 212, 0.85);
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(187, 106, 212, 0.35);
+}
+
+/* ==========================
+   EFECTO CLICK
+========================== */
+
+.botones button:active {
+    transform: scale(0.97);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 500px) {
+    .botones button {
+        flex: 1 1 100%;
+    }
+}
+
+/* ==========================
+   CONTENEDOR DE CARDS
+========================== */
+
+#contenedor-deudas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==========================
+   CARD DE DEUDA
+========================== */
+
+.deuda-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 18px;
+    padding: 20px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    transition: all 0.3s ease;
+}
+
+/* hover elegante */
+.deuda-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(187, 106, 212, 0.25);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+    #contenedor-deudas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================
+   CONTENEDOR GENERAL
+========================== */
+
+#contenedor-deudas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==========================
+   CARD BASE
+========================== */
+
+.deuda-card {
+    border-radius: 16px;
+    padding: 18px;
+
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    transition: all 0.3s ease;
+
+    color: #2d2d2d;
+}
+
+/* hover */
+.deuda-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(187, 106, 212, 0.25);
+}
+
+/* ==========================
+   PERSONAS (FONDO)
+========================== */
+
+/* 💙 MIGUEL */
+.deuda-card.miguel {
+    background: rgba(59, 130, 246, 0.12);
+}
+
+/* 💜 CAMILA */
+.deuda-card.camila {
+    background: rgba(187, 106, 212, 0.12);
+}
+
+/* ==========================
+   ESTADOS (BORDE IZQUIERDO)
+========================== */
+
+/* 🔴 PENDIENTE */
+.deuda-card.pendiente {
+    border-left: 6px solid #ef4444;
+}
+
+/* 🔵 EN CURSO */
+.deuda-card.en-curso {
+    border-left: 6px solid #3b82f6;
+}
+
+/* 🟢 PAGADO */
+.deuda-card.pagado {
+    border-left: 6px solid #22c55e;
+}
+
+/* 🟣 INFINITO */
+.deuda-card.infinito {
+    border-left: 6px solid #a855f7;
+}
+
+/* ==========================
+   BOTONES
+========================== */
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* estilo glass tipo navbar */
+.botones button {
+    flex: 1 1 45%;
+
+    padding: 10px 12px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    background: rgba(229, 192, 255, 0.25);
+    backdrop-filter: blur(10px);
+
+    color: #4b2c57;
+
+    font-weight: 600;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* hover morado */
+.botones button:hover {
+    background: rgba(187, 106, 212, 0.85);
+    color: white;
+
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(187, 106, 212, 0.35);
+}
+
+/* click */
+.botones button:active {
+    transform: scale(0.97);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+    #contenedor-deudas {
+        grid-template-columns: 1fr;
+    }
+}
+/* =====================================
+        CORAZÓN SECRETO
+===================================== */
+
+.corazon-secreto{
+
+    position:fixed;
+
+    left:18px;
+
+    bottom:18px;
+
+    font-size:16px;
+
+    color:rgba(255,120,150,.28);
+
+    text-decoration:none;
+
+    user-select:none;
+
+    z-index:9999;
+
+    transition:
+
+        transform .35s ease,
+
+        color .35s ease,
+
+        opacity .35s ease;
+
+    opacity:.18;
+
+}
+
+.corazon-secreto:hover{
+
+    opacity:.95;
+
+    color:#ff7fa2;
+
+    transform:
+
+        scale(1.25);
+
+    text-shadow:
+
+        0 0 8px rgba(255,120,170,.5),
+
+        0 0 18px rgba(255,120,170,.35);
+
+}
+
+.corazon-secreto{
+
+    position:fixed;
+
+    left:20px;
+
+    bottom:20px;
+
+    width:40px;
+
+    height:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgb(255, 104, 215);
+
+    color:white;
+
+    font-size:28px;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    z-index:999999;
+
+}
+
+@keyframes latido{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+.corazon-secreto{
+
+    animation:latido 3.5s ease-in-out infinite;
+
+}

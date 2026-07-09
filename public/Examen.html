@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Camila Arguello</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="Galeria/Icono.png" alt="Camila">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a href="Recuerdos.html">Recuerdos</a></li>
+                <li><a href="Examen.html">Examen</a></li>
+                <li><a href="Deudas.html">Deudas</a></li>
+                <li><a href="VoR.html">VoR</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section id="hero-examen">
+
+            <div class="hero-examen-overlay">
+
+                <h1>
+                    Examen Oficial Sobre Miguel
+                </h1>
+
+                <p class="subtitulo-examen">
+
+                    Certificación Internacional en Conocimiento de Miguel Ortiz®
+
+                </p>
+
+                <div class="caja-instrucciones">
+
+                    <h2>
+                        Instrucciones
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            Obligatorio responder todas las preguntas.
+                        </li>
+
+                        <li>
+                            No se permiten preguntas durante el Examen.
+                        </li>
+
+                        <li>
+                            Estrixtamente prohibido el uso de ChatGPT.
+                        </li>
+
+                        <li>
+                            Las respuestas al azar pueden tener consecuencias emocionales.
+                        </li>
+
+                        <li>
+                            No se permite ningun tipo de copia u ayuda externa.
+                        </li>
+
+                        <li>
+                            Cualquier intento de fraude corresponde a anulación del examen.
+                        </li>
+
+                        <li>
+                            Respire profundo y confíe en su memoria.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <button id="iniciar-examen" class="btn-examen">
+
+                    Comenzar Examen
+
+                </button>
+
+                <div id="cronometro">
+                    00:00
+                </div>
+
+            </div>
+
+        </section>
+
+        <div id="countdown-modal">
+
+            <div class="countdown-box">
+
+                <h2>
+                    El examen comenzará en...
+                </h2>
+
+                <div id="countdown">
+
+                    3
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <section id="preguntas">
+
+            <div class="titulo-container">
+
+                <h2 class="titulo-seccion">
+                    Evaluación N°2 de Miguel Ortiz
+                </h2>
+
+            </div>
+
+<!-- PREGUNTA 1 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Sección 1: Datos personales básicos
+    </h3>
+
+    <p>
+        ¿Dónde nací?
+    </p>
+
+    <label>
+        <input type="radio" name="p1" value="0">
+        Zapatoca, en el hospital
+    </label>
+
+    <label>
+        <input type="radio" name="p1" value="0">
+        Bucaramanga, en casa de mis padrinos
+    </label>
+
+    <label>
+        <input type="radio" name="p1" value="0">
+        En la finca de mis abuelos
+    </label>
+
+    <label>
+        <input type="radio" name="p1" value="1">
+        Ninguna de las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 2 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 2
+    </h3>
+
+    <p>
+        ¿Cuál es mi color favorito?
+    </p>
+
+    <label>
+        <input type="radio" name="p2" value="0">
+        Negro
+    </label>
+
+    <label>
+        <input type="radio" name="p2" value="0">
+        Blanco
+    </label>
+
+    <label>
+        <input type="radio" name="p2" value="0">
+        Amarillo
+    </label>
+
+    <label>
+        <input type="radio" name="p2" value="1">
+        Todos los anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 3 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 3
+    </h3>
+
+    <p>
+        ¿Cuál es mi comida rápida favorita?
+    </p>
+
+    <label>
+        <input type="radio" name="p3" value="0">
+        Pizza
+    </label>
+
+    <label>
+        <input type="radio" name="p3" value="1">
+        Papas Locas
+    </label>
+
+    <label>
+        <input type="radio" name="p3" value="0">
+        Hamburguesa
+    </label>
+
+    <label>
+        <input type="radio" name="p3" value="0">
+        Perro Caliente
+    </label>
+
+</div>
+
+<!-- PREGUNTA 4 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 4
+    </h3>
+
+    <p>
+        ¿Cuál es mi género musical favorito?
+    </p>
+
+    <label>
+        <input type="radio" name="p4" value="0">
+        Reggaetón
+    </label>
+
+    <label>
+        <input type="radio" name="p4" value="0">
+        Rap
+    </label>
+
+    <label>
+        <input type="radio" name="p4" value="0">
+        Hip-hop
+    </label>
+
+    <label>
+        <input type="radio" name="p4" value="1">
+        Sub genero especifico
+    </label>
+
+</div>
+
+<!-- PREGUNTA 5 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 5
+    </h3>
+
+    <p>
+        ¿Con qué cosas suele entretenerse Miguel?
+    </p>
+
+    <label>
+        <input type="radio" name="p5" value="0">
+        Películas
+    </label>
+
+    <label>
+        <input type="radio" name="p5" value="0">
+        Series
+    </label>
+
+    <label>
+        <input type="radio" name="p5" value="0">
+        Animes
+    </label>
+
+    <label>
+        <input type="radio" name="p5" value="0">
+        Libros
+    </label>
+
+    <label>
+        <input type="radio" name="p5" value="1">
+        Todas las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 6 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Sección 2: Costumbres y hábitos
+    </h3>
+
+    <p>
+        ¿A qué hora suelo dormir?
+    </p>
+
+    <label>
+        <input type="radio" name="p6" value="0">
+        8 a 10 pm
+    </label>
+
+    <label>
+        <input type="radio" name="p6" value="0">
+        10 a 12 pm
+    </label>
+
+    <label>
+        <input type="radio" name="p6" value="1">
+        12 a 1 pm
+    </label>
+
+    <label>
+        <input type="radio" name="p6" value="0">
+        Ninguna de las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 7 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 7
+    </h3>
+
+    <p>
+        ¿A qué hora suelo despertar?
+    </p>
+
+    <label>
+        <input type="radio" name="p7" value="0">
+        6 a 7 am
+    </label>
+
+    <label>
+        <input type="radio" name="p7" value="0">
+        7 a 8 am
+    </label>
+
+    <label>
+        <input type="radio" name="p7" value="0">
+        8 a 9 am
+    </label>
+
+    <label>
+        <input type="radio" name="p7" value="1">
+        Dependiendo lo que tenga que hacer
+    </label>
+
+</div>
+
+<!-- PREGUNTA 8 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 8
+    </h3>
+
+    <p>
+        ¿Qué es lo primero que hago al despertar?
+    </p>
+
+    <label>
+        <input type="radio" name="p8" value="1">
+        Echar pereza
+    </label>
+
+    <label>
+        <input type="radio" name="p8" value="0">
+        Cepillarme los dientes
+    </label>
+
+    <label>
+        <input type="radio" name="p8" value="0">
+        Desayunar
+    </label>
+
+    <label>
+        <input type="radio" name="p8" value="0">
+        Ninguna de las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 9 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Sección 3: Personalidad
+    </h3>
+
+    <p>
+        ¿Cómo se auto-percibe Miguel socializando?
+    </p>
+
+    <label>
+        <input type="radio" name="p9" value="0">
+        Introvertido
+    </label>
+
+    <label>
+        <input type="radio" name="p9" value="0">
+        Extrovertido
+    </label>
+
+    <label>
+        <input type="radio" name="p9" value="1">
+        Extrovertido para los introvertidos
+    </label>
+
+    <label>
+        <input type="radio" name="p9" value="0">
+        Ninguna de las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 10 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 10
+    </h3>
+
+    <p>
+        ¿Qué tipo de humor considero que destaca más en mí?
+    </p>
+
+    <label>
+        <input type="radio" name="p10" value="1">
+        Humor Rancio
+    </label>
+
+    <label>
+        <input type="radio" name="p10" value="0">
+        Humor Negro
+    </label>
+
+    <label>
+        <input type="radio" name="p10" value="0">
+        Humor intelectual
+    </label>
+
+    <label>
+        <input type="radio" name="p10" value="0">
+        Humor de internet
+    </label>
+
+</div>
+
+<!-- PREGUNTA 11 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 11
+    </h3>
+
+    <p>
+        Cuando alguien me hace algo malo, ¿qué hago?
+    </p>
+
+    <label>
+        <input type="radio" name="p11" value="0">
+        Perdonar pero nunca olvidar
+    </label>
+
+    <label>
+        <input type="radio" name="p11" value="1">
+        No perdonar y nunca olvidar
+    </label>
+
+    <label>
+        <input type="radio" name="p11" value="0">
+        Hacer como que nada pasó
+    </label>
+
+    <label>
+        <input type="radio" name="p11" value="0">
+        Venganzaaaaaaaaaaaaa
+    </label>
+
+</div>
+
+<!-- PREGUNTA 12 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 12
+    </h3>
+
+    <p>
+        ¿Cuál considero que es uno de mis mayores defectos?
+    </p>
+
+    <label>
+        <input type="radio" name="p12" value="0">
+        No saber medir mis bromas
+    </label>
+
+    <label>
+        <input type="radio" name="p12" value="0">
+        No tolerar cuando alguien se mete conmigo
+    </label>
+
+    <label>
+        <input type="radio" name="p12" value="1">
+        Tener un ego alto
+    </label>
+
+    <label>
+        <input type="radio" name="p12" value="0">
+        Todas las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 13 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 13
+    </h3>
+
+    <p>
+        ¿Cuál considero que es una de mis mejores cualidades?
+    </p>
+
+    <label>
+        <input type="radio" name="p13" value="0">
+        No querer buscar problemas
+    </label>
+
+    <label>
+        <input type="radio" name="p13" value="0">
+        Siempre andar sonriente
+    </label>
+
+    <label>
+        <input type="radio" name="p13" value="0">
+        Saber solucionar cualquier cosa
+    </label>
+
+    <label>
+        <input type="radio" name="p13" value="1">
+        Ninguna de las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 14 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Sección 4: Opiniones y valores
+    </h3>
+
+    <p>
+        ¿Cree Miguel que el dinero da la felicidad?
+    </p>
+
+    <label>
+        <input type="radio" name="p14" value="1">
+        Sí
+    </label>
+
+    <label>
+        <input type="radio" name="p14" value="0">
+        No
+    </label>
+
+    <label>
+        <input type="radio" name="p14" value="0">
+        Solo en algunas ocasiones
+    </label>
+
+    <label>
+        <input type="radio" name="p14" value="0">
+        Hay cosas más importantes que el dinero
+    </label>
+
+</div>
+
+<!-- PREGUNTA 15 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 15
+    </h3>
+
+    <p>
+        ¿Qué tipo de personas no tolero?
+    </p>
+
+    <label>
+        <input type="radio" name="p15" value="0">
+        Los agrandados
+    </label>
+
+    <label>
+        <input type="radio" name="p15" value="0">
+        Los mentirosos
+    </label>
+
+    <label>
+        <input type="radio" name="p15" value="0">
+        Los ignorantes
+    </label>
+
+    <label>
+        <input type="radio" name="p15" value="1">
+        Todas las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 16 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 16
+    </h3>
+
+    <p>
+        ¿Qué haría si ganara la lotería?
+    </p>
+
+    <label>
+        <input type="radio" name="p16" value="0">
+        Seguir un plan de inversión que tengo definido
+    </label>
+
+    <label>
+        <input type="radio" name="p16" value="0">
+        Preferiría recibir pequeños bonos mensuales
+    </label>
+
+    <label>
+        <input type="radio" name="p16" value="0">
+        Guardar el premio e ir gastando poco a poco
+    </label>
+
+    <label>
+        <input type="radio" name="p16" value="1">
+        Despilfarrar dinero
+    </label>
+
+</div>
+
+<!-- PREGUNTA 17 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 17
+    </h3>
+
+    <p>
+        ¿Qué sentimiento me desagrada más?
+    </p>
+
+    <label>
+        <input type="radio" name="p17" value="0">
+        Estar enojado
+    </label>
+
+    <label>
+        <input type="radio" name="p17" value="0">
+        Estar triste
+    </label>
+
+    <label>
+        <input type="radio" name="p17" value="1">
+        Sentirme solo
+    </label>
+
+    <label>
+        <input type="radio" name="p17" value="0">
+        Sentirme estresado
+    </label>
+
+</div>
+
+<!-- PREGUNTA 18 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Sección 5: Estudios y trabajo
+    </h3>
+
+    <p>
+        ¿Por qué elegí Ingeniería de Sistemas?
+    </p>
+
+    <label>
+        <input type="radio" name="p18" value="0">
+        Por el gusto a programar
+    </label>
+
+    <label>
+        <input type="radio" name="p18" value="0">
+        Interés en el hacking
+    </label>
+
+    <label>
+        <input type="radio" name="p18" value="0">
+        Gusto hacia los videojuegos
+    </label>
+
+    <label>
+        <input type="radio" name="p18" value="1">
+        Sin razón específica
+    </label>
+
+</div>
+
+<!-- PREGUNTA 19 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 19
+    </h3>
+
+    <p>
+        ¿Cuál línea de mi carrera me gusta más?
+    </p>
+
+    <label>
+        <input type="radio" name="p19" value="1">
+        Programación Web
+    </label>
+
+    <label>
+        <input type="radio" name="p19" value="0">
+        Programación de videojuegos
+    </label>
+
+    <label>
+        <input type="radio" name="p19" value="0">
+        Análisis/Minería de Datos
+    </label>
+
+    <label>
+        <input type="radio" name="p19" value="0">
+        Gestión de proyectos
+    </label>
+
+</div>
+
+<!-- PREGUNTA 20 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 20
+    </h3>
+
+    <p>
+        ¿Qué tipo de materias son las que menos me gustan?
+    </p>
+
+    <label>
+        <input type="radio" name="p20" value="1">
+        Cálculo y Matemáticas
+    </label>
+
+    <label>
+        <input type="radio" name="p20" value="0">
+        Redes y Servidores
+    </label>
+
+    <label>
+        <input type="radio" name="p20" value="0">
+        Programación
+    </label>
+
+    <label>
+        <input type="radio" name="p20" value="0">
+        Legislación/Leyes
+    </label>
+
+</div>
+
+<!-- PREGUNTA 21 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 21
+    </h3>
+
+    <p>
+        ¿Qué tipo de estudiante soy?
+    </p>
+
+    <label>
+        <input type="radio" name="p21" value="0">
+        Priorizo la máxima nota
+    </label>
+
+    <label>
+        <input type="radio" name="p21" value="0">
+        Me da igual el estudio
+    </label>
+
+    <label>
+        <input type="radio" name="p21" value="0">
+        "Pasar es pasar"
+    </label>
+
+    <label>
+        <input type="radio" name="p21" value="1">
+        Intento sacar buenas notas
+    </label>
+
+</div>
+
+<!-- PREGUNTA 22 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 22
+    </h3>
+
+    <p>
+        ¿Cómo prefiero trabajar?
+    </p>
+
+    <label>
+        <input type="radio" name="p22" value="0">
+        En equipo
+    </label>
+
+    <label>
+        <input type="radio" name="p22" value="1">
+        Solo
+    </label>
+
+    <label>
+        <input type="radio" name="p22" value="0">
+        Con amigos
+    </label>
+
+    <label>
+        <input type="radio" name="p22" value="0">
+        Con desconocidos que me acarren
+    </label>
+
+</div>
+
+<!-- PREGUNTA 23 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Sección 6: Datos y conversaciones random
+    </h3>
+
+    <p>
+        Si no fuese la Gixxer, ¿qué otra moto me habría gustado tener?
+    </p>
+
+    <label>
+        <input type="radio" name="p23" value="0">
+        TVS Raider 160
+    </label>
+
+    <label>
+        <input type="radio" name="p23" value="1">
+        KTM Duke 200
+    </label>
+
+    <label>
+        <input type="radio" name="p23" value="0">
+        Benelli 150 TNT
+    </label>
+
+    <label>
+        <input type="radio" name="p23" value="0">
+        Pulsar NS 200
+    </label>
+
+</div>
+
+<!-- PREGUNTA 24 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 24
+    </h3>
+
+    <p>
+        ¿Cómo se llama mi perfume?
+    </p>
+
+    <label>
+        <input type="radio" name="p24" value="1">
+        Temptation
+    </label>
+
+    <label>
+        <input type="radio" name="p24" value="0">
+        Dendur
+    </label>
+
+    <label>
+        <input type="radio" name="p24" value="0">
+        Osadía
+    </label>
+
+    <label>
+        <input type="radio" name="p24" value="0">
+        Ohm
+    </label>
+
+</div>
+
+<!-- PREGUNTA 25 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 25
+    </h3>
+
+    <p>
+        ¿Qué arete NO me haría?
+    </p>
+
+    <label>
+        <input type="radio" name="p25" value="0">
+        El segundo del lóbulo
+    </label>
+
+    <label>
+        <input type="radio" name="p25" value="0">
+        Hélix derecho
+    </label>
+
+    <label>
+        <input type="radio" name="p25" value="1">
+        Industrial
+    </label>
+
+    <label>
+        <input type="radio" name="p25" value="0">
+        Labio
+    </label>
+
+</div>
+
+<!-- PREGUNTA 26 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 26
+    </h3>
+
+    <p>
+        ¿Qué tatuajes no me haría?
+    </p>
+
+    <label>
+        <input type="radio" name="p26" value="0">
+        Nombres
+    </label>
+
+    <label>
+        <input type="radio" name="p26" value="0">
+        Frases en japonés
+    </label>
+
+    <label>
+        <input type="radio" name="p26" value="0">
+        Rostros de anime
+    </label>
+
+    <label>
+        <input type="radio" name="p26" value="1">
+        Todos los anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 27 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 27
+    </h3>
+
+    <p>
+        ¿Qué suelo pensar cuando me quedo mirando un punto fijo?
+    </p>
+
+    <label>
+        <input type="radio" name="p27" value="1">
+        Nada, mente en blanco
+    </label>
+
+    <label>
+        <input type="radio" name="p27" value="0">
+        Puteo la gente mentalmente
+    </label>
+
+    <label>
+        <input type="radio" name="p27" value="0">
+        Pienso en lo que me dijeron
+    </label>
+
+    <label>
+        <input type="radio" name="p27" value="0">
+        Nada de lo anterior es correcto
+    </label>
+
+</div>
+
+<!-- PREGUNTA 28 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 28
+    </h3>
+
+    <p>
+        ¿Por qué suelo salir a trotar?
+    </p>
+
+    <label>
+        <input type="radio" name="p28" value="0">
+        Por salud
+    </label>
+
+    <label>
+        <input type="radio" name="p28" value="0">
+        Por gusto
+    </label>
+
+    <label>
+        <input type="radio" name="p28" value="1">
+        Porque no hay nada más por hacer
+    </label>
+
+    <label>
+        <input type="radio" name="p28" value="0">
+        Porque me siento gordo
+    </label>
+
+</div>
+
+<!-- PREGUNTA 29 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 29
+    </h3>
+
+    <p>
+        ¿A qué es más probable que me inscriba?
+    </p>
+
+    <label>
+        <input type="radio" name="p29" value="1">
+        Al gimnasio
+    </label>
+
+    <label>
+        <input type="radio" name="p29" value="0">
+        Grupo de fútbol
+    </label>
+
+    <label>
+        <input type="radio" name="p29" value="0">
+        Grupo de moteros
+    </label>
+
+    <label>
+        <input type="radio" name="p29" value="0">
+        Ninguna de las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 30 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 30
+    </h3>
+
+    <p>
+        ¿Cuál equipo de fútbol llegó a ser mi favorito?
+    </p>
+
+    <label>
+        <input type="radio" name="p30" value="1">
+        Real Madrid
+    </label>
+
+    <label>
+        <input type="radio" name="p30" value="0">
+        Barcelona
+    </label>
+
+    <label>
+        <input type="radio" name="p30" value="0">
+        Bayern Múnich
+    </label>
+
+    <label>
+        <input type="radio" name="p30" value="0">
+        Juventus
+    </label>
+
+</div>
+
+<!-- PREGUNTA 31 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 31
+    </h3>
+
+    <p>
+        ¿Qué es lo más común que hago cuando pienso mucho?
+    </p>
+
+    <label>
+        <input type="radio" name="p31" value="0">
+        Muevo una pierna
+    </label>
+
+    <label>
+        <input type="radio" name="p31" value="1">
+        Miro un punto fijo
+    </label>
+
+    <label>
+        <input type="radio" name="p31" value="0">
+        Jugueteo con las manos
+    </label>
+
+    <label>
+        <input type="radio" name="p31" value="0">
+        Ninguna de las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 32 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Sección 7: Nosotros
+    </h3>
+
+    <p>
+        ¿Cuál fue nuestro primer mensaje en Instagram?
+    </p>
+
+    <label>
+        <input type="radio" name="p32" value="0">
+        Un saludo
+    </label>
+
+    <label>
+        <input type="radio" name="p32" value="1">
+        Un Reel gracioso
+    </label>
+
+    <label>
+        <input type="radio" name="p32" value="0">
+        Un mensaje criticando a alguien
+    </label>
+
+    <label>
+        <input type="radio" name="p32" value="0">
+        Ninguna de las anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 33 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 33
+    </h3>
+
+    <p>
+        ¿Cuál fue nuestro primer mensaje en WhatsApp?
+    </p>
+
+    <label>
+        <input type="radio" name="p33" value="0">
+        Un saludo
+    </label>
+
+    <label>
+        <input type="radio" name="p33" value="1">
+        Un video chistoso
+    </label>
+
+    <label>
+        <input type="radio" name="p33" value="0">
+        Un mensaje criticando a alguien
+    </label>
+
+    <label>
+        <input type="radio" name="p33" value="0">
+        Algo de la chamba
+    </label>
+
+</div>
+
+<!-- PREGUNTA 34 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 34
+    </h3>
+
+    <p>
+        ¿Qué dulce no llegamos a compartir en la chamba?
+    </p>
+
+    <label>
+        <input type="radio" name="p34" value="0">
+        Okaloka
+    </label>
+
+    <label>
+        <input type="radio" name="p34" value="0">
+        Minichips
+    </label>
+
+    <label>
+        <input type="radio" name="p34" value="0">
+        Quipitos
+    </label>
+
+    <label>
+        <input type="radio" name="p34" value="1">
+        Ninguno de los anteriores
+    </label>
+
+</div>
+
+<!-- PREGUNTA 35 -->
+
+<div class="pregunta-card">
+
+    <h3>
+        Pregunta 35
+    </h3>
+
+    <p>
+        ¿Qué pregunta NO estaba en el primer examen?
+    </p>
+
+    <label>
+        <input type="radio" name="p35" value="0">
+        ¿Soy más racional o emocional?
+    </label>
+
+    <label>
+        <input type="radio" name="p35" value="0">
+        ¿Cómo me definiría mejor en una reunión con desconocidos?
+    </label>
+
+    <label>
+        <input type="radio" name="p35" value="0">
+        Fecha de nacimiento
+    </label>
+
+    <label>
+        <input type="radio" name="p35" value="0">
+        Todas las anteriores
+    </label>
+
+    <label>
+        <input type="radio" name="p35" value="1">
+        Ninguna de las anteriores
+    </label>
+
+</div>
+
+            <button id="calcular-nota">
+                Calcular Resultado
+            </button>
+
+            <div id="resultado">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+</body>
+
+<script src="js/examen.js"></script>
+<script src="js/cursor.js"></script>
+
+</html>

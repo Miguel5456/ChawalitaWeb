@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Camila Arguello</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deudas - Camila & Miguel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+        <header>
+        <nav class="navbar">
+
+            <div class="logo">
+               <a href="Deuda.html">  <img src="Galeria/Icono.png" alt="Camila">
+            </div></a>
+
+            <ul class="nav-links">
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a href="Recuerdos.html">Recuerdos</a></li>
+                <li><a href="Examen.html">Examen</a></li>
+                <li><a href="Deudas.html">Deudas</a></li>
+                <li><a href="VoR.html">VoR</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section id="hero-deudas">
+
+        <div class="hero-deudas-overlay">
+
+            <div class="hero-texto">
+
+
+                <h1>
+                    Centro Financiero Camila & Miguel®
+                </h1>
+
+                <p class="descripcion-deudas">
+                    Toda deuda, promesa, favor, helado o salida queda registrada
+                    para mantener un equilibrio financiero entre ambas partes.
+                </p>
+
+            </div>
+
+            <div class="hero-imagen">
+                <img src="Galeria/Nosotros.jpeg" alt="Camila y Miguel">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= RESUMEN ================= -->
+    <section id="estado-cuenta">
+
+        <div class="titulo-container">
+
+            <h2 class="titulo-seccion">
+                Resumen Financiero
+            </h2>
+
+        </div>
+
+        <div class="resumen-grid">
+
+            <div class="resumen-card">
+                <h3>💸</h3>
+                <h2 id="miguel-debe">0</h2>
+                <p>Miguel debe</p>
+            </div>
+
+            <div class="resumen-card">
+                <h3>💜</h3>
+                <h2 id="camila-debe">0</h2>
+                <p>Camila debe</p>
+            </div>
+
+            <div class="resumen-card">
+                <h3>📋</h3>
+                <h2 id="total-deudas">0</h2>
+                <p>Total de deudas</p>
+            </div>
+
+            <div class="resumen-card">
+                <h3>✅</h3>
+                <h2 id="deudas-pagadas">0</h2>
+                <p>Pagadas</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+        <div class="titulo-container">
+
+            <h2 class="titulo-seccion">
+                Crear Deudas
+            </h2>
+
+        
+
+    <div class="form-deudas">
+
+    <input type="text" id="titulo" placeholder="Título de la deuda">
+
+    <input type="text" id="descripcion" placeholder="Descripción">
+
+    <select id="deudor">
+        <option value="">Seleccionar deudor</option>
+        <option value="Miguel">Miguel</option>
+        <option value="Camila">Camila</option>
+    </select>
+
+    <select id="acreedor">
+        <option value="">Seleccionar acreedor</option>
+        <option value="Miguel">Miguel</option>
+        <option value="Camila">Camila</option>
+    </select>
+
+    <button id="btn-crear" type="button">
+        Crear deuda
+    </button>
+
+</div>
+</div>
+
+    <!-- ================= LISTA DE DEUDAS ================= -->
+    <section id="lista-deudas">
+
+        <div class="titulo-container">
+
+            <h2 class="titulo-seccion">
+                Listado Oficial de Deudas
+            </h2>
+
+            <p class="subtitulo-seccion">
+                Registro oficial de todas las deudas, promesas y cuentas pendientes.
+            </p>
+
+        </div>
+
+        <!-- CONTENEDOR DINÁMICO (IMPORTANTE: SOLO UNO) -->
+        <div id="contenedor-deudas">
+            
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <h3>Camila Arguello Group®</h3>
+
+        <p>
+            Departamento de Recuerdos y Gestión de Deudas.
+        </p>
+
+        <span>© 2026</span>
+
+    </footer>
+
+<div id="modal-editar" class="modal">
+
+    <div class="modal-contenido">
+
+        <h2>Editar Deuda</h2>
+
+        <input type="text" id="edit-titulo" placeholder="Título">
+        <input type="text" id="edit-descripcion" placeholder="Descripción">
+        <input type="text" id="edit-deudor" placeholder="Deudor">
+        <input type="text" id="edit-acreedor" placeholder="Acreedor">
+
+        <button id="guardar-cambios">
+            💾 Guardar cambios
+        </button>
+
+        <button id="cerrar-modal">
+            ❌ Cancelar
+        </button>
+
+    </div>
+
+</div>
+
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="js/galeria.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/deudas.js"></script>
+
+</body>
+
+</html>

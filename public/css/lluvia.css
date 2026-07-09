@@ -1,0 +1,569 @@
+/* ======================================================
+                        RESET
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Cormorant Garamond",serif;
+
+    background:#0a0f18;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ======================================================
+                    FONDO
+====================================================== */
+
+#sky{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,#34435c,#1d2634,#090b11);
+
+    z-index:-15;
+
+}
+
+#mist{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,.08),
+    transparent 70%);
+
+    filter:blur(70px);
+
+    opacity:.35;
+
+    z-index:-14;
+
+}
+
+#rain{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:-13;
+
+}
+
+#lightning{
+
+    position:fixed;
+
+    inset:0;
+
+    background:white;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    mix-blend-mode:screen;
+
+    z-index:-12;
+
+}
+
+#rainbow{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:0;
+
+    z-index:-11;
+
+}
+
+
+/* ======================================================
+                    ESCENA
+====================================================== */
+
+.escena{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px;
+
+}
+
+
+/* ======================================================
+                    CRISTAL
+====================================================== */
+
+.cristal{
+
+    position:relative;
+
+    width:min(1050px,92vw);
+
+    min-height:90vh;
+
+    padding:80px;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(18px) saturate(130%);
+
+    -webkit-backdrop-filter:blur(18px) saturate(130%);
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.14),
+
+        rgba(255,255,255,.05)
+
+    );
+
+    border:
+
+    1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+
+        inset 0 0 0 1px rgba(255,255,255,.08),
+
+        inset 0 25px 35px rgba(255,255,255,.06),
+
+        inset 0 -20px 30px rgba(0,0,0,.18),
+
+        0 40px 90px rgba(0,0,0,.45),
+
+        0 0 80px rgba(170,210,255,.08);
+
+}
+
+
+/* ======================================================
+                REFLEJO PRINCIPAL
+====================================================== */
+
+.cristal::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:170%;
+
+    height:40%;
+
+    left:-30%;
+
+    top:-12%;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.20),
+
+        transparent
+
+    );
+
+    transform:rotate(-6deg);
+
+    pointer-events:none;
+
+}
+
+
+/* ======================================================
+            BRILLO DEL BORDE
+====================================================== */
+
+.cristal::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    box-shadow:
+
+        inset 0 0 25px rgba(255,255,255,.10),
+
+        inset 0 0 70px rgba(180,220,255,.06);
+
+    pointer-events:none;
+
+}
+
+
+/* ======================================================
+                TÍTULO
+====================================================== */
+
+.titulo{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.titulo h1{
+
+    font-size:3.2rem;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-shadow:
+
+        0 0 20px rgba(255,255,255,.15);
+
+}
+
+.titulo p{
+
+    margin-top:18px;
+
+    font-size:1.15rem;
+
+    opacity:.75;
+
+}
+
+
+/* ======================================================
+                POEMA
+====================================================== */
+
+.poema{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:120px;
+
+}
+
+.acto{
+
+    min-height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.acto p{
+
+    font-size:1.55rem;
+
+    line-height:2.1;
+
+    color:#eef4ff;
+
+    text-shadow:
+
+        0 0 10px rgba(255,255,255,.08);
+
+    margin-bottom:12px;
+
+}
+
+.acto h2{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    font-size:2.3rem;
+
+}
+
+.acto h1{
+
+    text-align:center;
+
+    font-size:3rem;
+
+}
+
+
+/* ======================================================
+                FIRMA
+====================================================== */
+
+.firma{
+
+    margin-top:90px;
+
+    text-align:right;
+
+    font-size:1.3rem;
+
+    opacity:.85;
+
+}
+
+.firma span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:1.7rem;
+
+}
+
+
+/* ======================================================
+                FINAL
+====================================================== */
+
+footer{
+
+    padding:100px;
+
+    text-align:center;
+
+}
+
+.teamo{
+
+    font-size:4rem;
+
+    opacity:.9;
+
+    text-shadow:
+
+        0 0 25px rgba(255,255,255,.2);
+
+}
+
+
+/* ======================================================
+                SCROLL
+====================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:20px;
+
+}
+
+
+/* ======================================================
+            RESPONSIVE
+====================================================== */
+
+@media(max-width:900px){
+
+    .escena{
+
+        padding:20px;
+
+    }
+
+    .cristal{
+
+        width:96vw;
+
+        padding:45px;
+
+    }
+
+    .titulo h1{
+
+        font-size:2.3rem;
+
+    }
+
+    .acto p{
+
+        font-size:1.2rem;
+
+        line-height:1.8;
+
+    }
+
+}
+
+/* =====================================
+            LLUVIA
+===================================== */
+
+#rain{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:-13;
+
+}
+
+/* ==============================
+        RELÁMPAGO
+============================== */
+
+#lightning{
+
+    position:fixed;
+
+    inset:0;
+
+    background:white;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:999;
+
+    mix-blend-mode:screen;
+
+}
+
+
+/* ==============================
+    DESTELLO SUAVE
+============================== */
+
+@keyframes flash{
+
+    0%{
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:.9;
+
+    }
+
+    30%{
+
+        opacity:.35;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+    }
+
+}
+
+.flash{
+
+    animation:flash .35s ease-out;
+
+}
+
+/* =====================================
+            TE AMO
+===================================== */
+
+.teamo{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:5.5rem;
+
+    font-weight:400;
+
+    color:#ffffff;
+
+    letter-spacing:2px;
+
+    text-align:center;
+
+    opacity:.98;
+
+    animation:brillo 4s ease-in-out infinite;
+
+    text-shadow:
+
+        0 0 8px rgba(255,255,255,.75),
+
+        0 0 18px rgba(255,255,255,.45),
+
+        0 0 35px rgba(255,240,210,.35),
+
+        0 0 60px rgba(255,240,210,.18);
+
+}

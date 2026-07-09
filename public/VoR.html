@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Verdad o Reto</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/vor.css">
+
+</head>
+
+<body>
+
+    <!-- ===========================
+            NAVBAR
+    ============================ -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <img src="Galeria/Icono.png"
+                     alt="Camila">
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="Index.html">Inicio</a></li>
+
+                <li><a href="Galeria.html">Galería</a></li>
+
+                <li><a href="Recuerdos.html">Recuerdos</a></li>
+
+                <li><a href="Examen.html">Examen</a></li>
+
+                <li><a href="Deudas.html">Deudas</a></li>
+
+                <li><a href="VoR.html">VoR</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ===========================
+            INTRODUCCIÓN
+    ============================ -->
+
+    <main>
+
+        <section
+            id="pantallaInicio"
+            class="pantallaInicio">
+
+            <h1>
+
+                 Verdad o Reto 
+
+            </h1>
+
+            <p>
+
+                Bienvenidos.
+
+                <br><br>
+
+                Cada turno uno de los dos elegirá entre
+
+                <strong>Verdad</strong>
+
+                o
+
+                <strong>Reto</strong>.
+
+                <br><br>
+
+                ¿Seguros que desean iniciar el juego?
+
+            </p>
+
+            <button id="btnComenzar">
+
+                Iniciar Juego
+
+            </button>
+
+        </section>
+
+
+        <!-- ===========================
+                JUEGO
+        ============================ -->
+
+        <section
+            id="pantallaJuego"
+            class="pantallaJuego oculto">
+
+            <div class="turno">
+
+                <h2>
+
+                    Turno de
+
+                </h2>
+
+                <h1 id="jugadorActual">
+
+                    Miguel
+
+                </h1>
+
+            </div>
+
+
+            <!-- CARTAS -->
+
+            <div
+                id="cartas"
+                class="cartas">
+
+                <div
+                    id="cartaVerdad"
+                    class="carta">
+
+                    <h2>
+
+                        🤍
+
+                    </h2>
+
+                    <h1>
+
+                        VERDAD
+
+                    </h1>
+
+                </div>
+
+                <div
+                    id="cartaReto"
+                    class="carta">
+
+                    <h2>
+
+                        🔥
+
+                    </h2>
+
+                    <h1>
+
+                        RETO
+
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREGUNTA -->
+
+            <div
+                id="panelPregunta"
+                class="panelPregunta oculto">
+
+                <span id="tipoPregunta">
+
+                    VERDAD
+
+                </span>
+
+                <p id="textoPregunta">
+
+                    Aquí aparecerá la pregunta.
+
+                </p>
+
+                <button
+                    id="btnCumplido">
+
+                    Cumplió ✔
+
+                </button>
+
+
+            </div>
+
+            
+                <button id="btnSalir">
+
+    Finalizar Juego
+
+</button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ===========================
+            FOOTER
+    ============================ -->
+
+    <footer class="footer">
+
+        <h3>
+
+            Camila Arguello Group®
+
+        </h3>
+
+        <p>
+
+            Departamento de Recuerdos y Gestión de Deudas.
+
+        </p>
+
+    </footer>
+
+
+    <script src="js/index.js"></script>
+
+    <script src="js/cursor.js"></script>
+
+    <script src="js/vor.js"></script>
+
+</body>
+
+</html>
