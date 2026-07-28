@@ -2470,3 +2470,144 @@ body{
     animation:latido 3.5s ease-in-out infinite;
 
 }
+
+.titulo-tabla{
+
+    margin-top:60px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+    font-size:2rem;
+
+    color:#4d2c37;
+
+}
+
+.tabla-deudas{
+
+    width:90%;
+
+    margin:0 auto 60px auto;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.tabla-deudas th{
+
+    background:#e7b8ff;
+
+    color:#4d2c37;
+
+    padding:15px;
+
+}
+
+.tabla-deudas td{
+
+    padding:15px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.tabla-deudas tr:hover{
+
+    background:#faf5ff;
+
+}
+
+.tabla-deudas button{
+
+    margin:2px;
+
+    padding:6px 10px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+        COLORES POR ESTADO
+=========================== */
+
+.tabla-deudas tr.pagado{
+
+    background:#d4f7d4;
+
+}
+
+.tabla-deudas tr.en-curso{
+
+    background:#d9eeff;
+
+}
+
+.tabla-deudas tr.pendiente{
+
+    background:#f7ecff;
+
+}
+
+.tabla-deudas tr:hover{
+
+    filter:brightness(.96);
+
+    transition:.25s;
+
+}
+
+.tabla-deudas tr.pagado{
+
+    background:#d4f7d4;
+
+}
+
+.tabla-deudas tr.en-curso{
+
+    background:#d9eeff;
+
+}
+
+.tabla-deudas tr.pendiente{
+
+    background:#f7ecff;
+
+}
+
+#miguel-debe{
+    color:#e74c3c;
+    font-weight:700;
+}
+
+#camila-debe{
+    color:#9b59b6;
+    font-weight:700;
+}
+
+#total-deudas{
+    color:#3498db;
+    font-weight:700;
+}
+
+#deudas-pagadas{
+    color:#27ae60;
+    font-weight:700;
+}
+

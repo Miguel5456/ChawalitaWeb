@@ -795,3 +795,38 @@ button{
     transform:scale(.97);
 
 }
+
+.info-turno{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-top:15px;
+    margin-bottom:35px;
+
+}
+
+.info-turno span{
+
+    padding:10px 22px;
+
+    background:white;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    color:#6b4d86;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+
+    font-size:1rem;
+
+    transition:.4s;
+
+}

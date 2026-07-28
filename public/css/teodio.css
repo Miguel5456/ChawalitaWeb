@@ -1,0 +1,392 @@
+    *{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#0b0b0b;
+
+    overflow-x:hidden;
+
+    overflow-y:auto;
+
+    color:white;
+
+}
+
+/* ===========================
+        INTRO
+=========================== */
+
+#intro{
+
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle,
+    #1b1b1b,
+    #080808);
+
+    transition:.8s;
+
+}
+
+.intro-contenido{
+
+    text-align:center;
+
+    max-width:700px;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.intro-contenido h1{
+
+    font-size:3rem;
+
+    font-weight:300;
+
+    margin-bottom:20px;
+
+}
+
+.intro-contenido p{
+
+    font-size:1.1rem;
+
+    opacity:.75;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+#btnEntrar{
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#111;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+#btnEntrar:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 30px rgba(255,255,255,.2);
+
+}
+
+/* ===========================
+        POEMA
+=========================== */
+
+#poemaSection{
+
+    width:100vw;
+    min-height:100vh;
+
+    padding:80px 0; 
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#0b0b0b;
+
+    padding:40px;
+
+}
+
+.hoja{
+
+    width:780px;
+
+    max-width:95%;
+
+    background:#fafafa;
+
+    color:#222;
+
+    border-radius:22px;
+
+    padding:70px;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+    animation:aparecer .8s ease;
+
+}
+
+.hoja h2{
+
+    text-align:center;
+
+    font-size:2.4rem;
+
+    font-weight:500;
+
+    margin-bottom:45px;
+
+}
+
+#textoPoema{
+
+    white-space:pre-line;
+
+    font-size:1.25rem;
+
+    line-height:2.2;
+
+    min-height:520px;
+
+}
+
+/* ===========================
+        FINAL
+=========================== */
+
+#finalPoema{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    animation:fadeUp .8s ease;
+
+}
+
+.corazon{
+
+    display:block;
+
+    font-size:1.8rem;
+
+    margin-bottom:15px;
+
+}
+
+#btnCambiar{
+
+    display:inline-block;
+
+    cursor:pointer;
+
+    color:#777;
+
+    font-style:italic;
+
+    transition:.3s;
+
+}
+
+#btnCambiar:hover{
+
+    color:#cf4d8b;
+
+}
+
+/* ===========================
+        MENSAJE FINAL
+=========================== */
+
+#mensajeFinal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    background:rgba(0,0,0,.92);
+
+    z-index:9999;
+
+    opacity:1;
+
+    transition:.8s;
+
+}
+
+#mensajeFinal.oculto{
+
+    display:none;
+
+}
+
+#mensajeFinal h2{
+
+    font-size:3rem;
+
+    font-weight:300;
+
+    margin-bottom:20px;
+
+}
+
+#mensajeFinal p{
+
+    font-size:1.4rem;
+
+    opacity:.85;
+
+}
+
+/* ===========================
+        CAMBIO AMO
+=========================== */
+
+.amo{
+
+    color:#cf4d8b;
+
+    font-weight:600;
+
+    transition:.5s;
+
+}
+
+/* ===========================
+        UTILIDADES
+=========================== */
+.oculto{
+
+    display:none !important;
+
+}
+
+/* ===========================
+        ANIMACIONES
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .intro-contenido h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .hoja{
+
+        padding:40px;
+
+    }
+
+    #textoPoema{
+
+        font-size:1.05rem;
+
+        line-height:2;
+
+        min-height:420px;
+
+    }
+
+    .hoja h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+.odio{
+
+    transition:.6s;
+
+}
+
+.amo{
+
+    color:#ff4f93;
+
+    font-weight:600;
+
+    text-shadow:0 0 10px rgba(255,80,150,.5);
+
+    transition:.6s;
+
+}

@@ -3,7 +3,11 @@ console.log("🔥 deudas.js cargado");
 // ==========================
 // CONTENEDOR
 // ==========================
-const contenedor = document.getElementById("contenedor-deudas");
+const tablaMiguel =
+document.getElementById("tabla-miguel");
+
+const tablaCamila =
+document.getElementById("tabla-camila");
 
 // ==========================
 // ESTADO LOCAL
@@ -16,6 +20,7 @@ let deudas = [];
 async function cargarDeudas() {
 
     try {
+
         console.log("📡 Cargando deudas desde API...");
 
         const res = await fetch("/api/deudas");
@@ -25,90 +30,126 @@ async function cargarDeudas() {
 
         renderDeudas();
 
-    } catch (error) {
-        console.log("❌ Error cargando deudas:", error);
-    }
-}
-
-async function cargarDeudas() {
-
-    try {
-
-        const res = await fetch("/api/deudas");
-        deudas = await res.json();
-
-        renderDeudas();
-
-        actualizarResumen(); // 💥 IMPORTANTE
+        actualizarResumen();
 
     } catch (error) {
+
         console.log("❌ Error cargando deudas:", error);
+
     }
+
 }
 
-// ==========================
-// RENDER DEUDAS
-// ==========================
-function renderDeudas() {
+function crearTabla(lista){
 
-    contenedor.innerHTML = "";
+    if(lista.length===0){
 
-    if (!deudas || deudas.length === 0) {
-        contenedor.innerHTML = "<p>No hay deudas registradas 💜</p>";
-        return;
+        return "<p>No hay registros.</p>";
+
     }
 
-    deudas.forEach(d => {
+    let html = `
 
-        // ==========================
-        // NORMALIZACIÓN SEGURA
-        // ==========================
-        const estado = (d.estado || "pendiente")
+    <table class="tabla-deudas">
+
+        <thead>
+
+            <tr>
+
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Acreedor</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+    `;
+
+    lista.forEach(d=>{
+
+        const estadoClase = (d.estado || "")
             .toLowerCase()
             .replace(/\s+/g, "-");
 
-        const deudor = (d.deudor || "desconocido")
-            .toLowerCase()
-            .trim();
+        html += `
 
-        contenedor.innerHTML += `
-            <div class="deuda-card ${estado} ${deudor}">
+        <tr class="${estadoClase}">
 
-                <h3>${d.titulo || "Sin título"}</h3>
-                <p>${d.descripcion || ""}</p>
+            <td>${d.titulo}</td>
 
-                <div class="info">
-                    <span><b>Deudor:</b> ${d.deudor}</span><br>
-                    <span><b>Acreedor:</b> ${d.acreedor}</span>
-                </div>
+            <td>${d.descripcion}</td>
 
-                <div class="estado">
-                    ${d.estado}
-                </div>
+            <td>${d.acreedor}</td>
 
-                <div class="botones">
+            <td>${d.estado}</td>
 
-                    <button onclick="cambiarEstado('${d._id}', 'Pagado')">
-                        ✔ Pagado
-                    </button>
+            <td>
 
-                    <button onclick="cambiarEstado('${d._id}', 'Pendiente')">
-                        ⏳ Pendiente
-                    </button>
+                <button onclick="cambiarEstado('${d._id}','Pagado')">
 
-                    <button onclick="cambiarEstado('${d._id}', 'En curso')">
-                        🔄 En curso
-                    </button>
+                    ✔
 
-                    <button onclick="eliminarDeuda('${d._id}')">
-                        🗑 Eliminar
-                    </button>
+                </button>
 
-                </div>
+                <button onclick="cambiarEstado('${d._id}','Pendiente')">
 
-            </div>
+                    ⏳
+
+                </button>
+
+                <button onclick="cambiarEstado('${d._id}','En curso')">
+
+                    🔄
+
+                </button>
+
+                <button onclick="eliminarDeuda('${d._id}')">
+
+                    🗑
+
+                </button>
+
+            </td>
+
+        </tr>
+
         `;
+
     });
+
+    html += `
+
+        </tbody>
+
+    </table>
+
+    `;
+
+    return html;
+
+}
+
+function renderDeudas(){
+
+    const miguel = deudas.filter(d =>
+        d.deudor.toLowerCase()=="miguel"
+    );
+
+    const camila = deudas.filter(d =>
+        d.deudor.toLowerCase()=="camila"
+    );
+
+    tablaMiguel.innerHTML = crearTabla(miguel);
+
+    tablaCamila.innerHTML = crearTabla(camila);
+
+    actualizarResumen();
+
 }
 
 // ==========================
@@ -151,42 +192,6 @@ async function eliminarDeuda(id) {
     }
 }
 
-async function crearDeuda() {
-
-    const nuevaDeuda = {
-        titulo: document.getElementById("titulo")?.value?.trim(),
-        descripcion: document.getElementById("descripcion")?.value?.trim(),
-        deudor: document.getElementById("deudor")?.value,
-        acreedor: document.getElementById("acreedor")?.value,
-        estado: "Pendiente"
-    };
-
-    console.log("📤 Enviando deuda:", nuevaDeuda);
-
-    // VALIDACIÓN BÁSICA
-    if (!nuevaDeuda.titulo || !nuevaDeuda.deudor || !nuevaDeuda.acreedor) {
-        alert("⚠️ Completa todos los campos");
-        return;
-    }
-
-    try {
-        const res = await fetch("/api/deudas", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(nuevaDeuda)
-        });
-
-        const data = await res.json();
-        console.log("📥 Respuesta backend:", data);
-
-        await cargarDeudas(); // 🔥 CLAVE
-
-    } catch (error) {
-        console.log("❌ Error creando deuda:", error);
-    }
-}
 
 // ==========================
 // INICIALIZAR
@@ -195,7 +200,9 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarDeudas();
 });
 
-function actualizarResumen() {
+function actualizarResumen(){
+
+    console.log("Entró a actualizarResumen");
 
     let miguelDebe = 0;
     let camilaDebe = 0;
@@ -204,31 +211,36 @@ function actualizarResumen() {
 
     deudas.forEach(d => {
 
-        const estado = (d.estado || "").toLowerCase();
-        const deudor = (d.deudor || "").toLowerCase();
+        console.log(d.deudor, d.estado);
 
-        // contar pagadas
-        if (estado === "pagado") {
-            pagadas++;
-        }
-
-        // deuda por persona
-        if (deudor === "miguel") {
+        if(d.deudor === "Miguel"){
             miguelDebe++;
         }
 
-        if (deudor === "camila") {
+        if(d.deudor === "Camila"){
             camilaDebe++;
         }
+
+        if(d.estado === "Pagado"){
+            pagadas++;
+        }
+
+    });
+
+    console.log({
+        miguelDebe,
+        camilaDebe,
+        total,
+        pagadas
     });
 
     document.getElementById("miguel-debe").textContent = miguelDebe;
     document.getElementById("camila-debe").textContent = camilaDebe;
     document.getElementById("total-deudas").textContent = total;
     document.getElementById("deudas-pagadas").textContent = pagadas;
+
 }
 
-console.log("🔥 deudas.js cargado");
 
 // ==========================
 // CREAR DEUDA
