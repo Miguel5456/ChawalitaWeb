@@ -2611,3 +2611,325 @@ body{
     font-weight:700;
 }
 
+/* ===========================
+   CONTADOR DE NOVIOS 💜
+=========================== */
+
+#contador-novios {
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 100px auto;
+
+    padding: 60px 30px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(238, 226, 255, 0.85),
+            rgba(248, 241, 255, 0.95)
+        );
+
+    box-shadow:
+        0 15px 40px rgba(80, 50, 120, 0.12);
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* ===========================
+   DECORACIÓN
+=========================== */
+
+#contador-novios::before {
+
+    content: "♡";
+
+    position: absolute;
+
+    top: 15px;
+    left: 35px;
+
+    font-size: 50px;
+
+    opacity: .15;
+
+    transform: rotate(-15deg);
+
+}
+
+#contador-novios::after {
+
+    content: "♡";
+
+    position: absolute;
+
+    bottom: 10px;
+    right: 35px;
+
+    font-size: 60px;
+
+    opacity: .15;
+
+    transform: rotate(15deg);
+
+}
+
+
+/* ===========================
+   CONTENIDO
+=========================== */
+
+.contador-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* ===========================
+   TÍTULO
+=========================== */
+
+.contador-contenido h2 {
+
+    margin: 0;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    color: #5d4675;
+
+}
+
+
+/* ===========================
+   SUBTÍTULO
+=========================== */
+
+.contador-contenido p {
+
+    margin-top: 10px;
+
+    margin-bottom: 40px;
+
+    font-size: 16px;
+
+    color: #806b91;
+
+    font-weight: 300;
+
+}
+
+
+/* ===========================
+   CONTENEDOR DE NÚMEROS
+=========================== */
+
+#tiempo-juntos {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* ===========================
+   CADA UNIDAD
+=========================== */
+
+#tiempo-juntos > div {
+
+    min-width: 130px;
+
+    padding: 22px 18px;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.75);
+
+    box-shadow:
+        0 8px 25px rgba(80,50,120,.08);
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+/* ===========================
+   EFECTO HOVER
+=========================== */
+
+#tiempo-juntos > div:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 14px 30px rgba(80,50,120,.14);
+
+}
+
+
+/* ===========================
+   NÚMEROS
+=========================== */
+
+#tiempo-juntos strong {
+
+    display: block;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    color: #74548d;
+
+}
+
+
+/* ===========================
+   TEXTO
+=========================== */
+
+#tiempo-juntos span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    color: #9b83aa;
+
+    font-weight: 500;
+
+}
+
+
+/* ===========================
+   CORAZÓN DECORATIVO
+=========================== */
+
+.contador-contenido::after {
+
+    content: "♥";
+
+    display: block;
+
+    margin-top: 35px;
+
+    font-size: 24px;
+
+    color: #c69bd8;
+
+    animation: latido 1.8s infinite;
+
+}
+
+
+/* ===========================
+   ANIMACIÓN
+=========================== */
+
+@keyframes latido {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.25);
+
+    }
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 700px) {
+
+    #contador-novios {
+
+        width: 88%;
+
+        padding: 45px 15px;
+
+        margin: 70px auto;
+
+    }
+
+
+    .contador-contenido h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    #tiempo-juntos {
+
+        gap: 10px;
+
+    }
+
+
+    #tiempo-juntos > div {
+
+        min-width: 100px;
+
+        padding: 18px 12px;
+
+    }
+
+
+    #tiempo-juntos strong {
+
+        font-size: 32px;
+
+    }
+
+
+    #tiempo-juntos span {
+
+        font-size: 11px;
+
+        letter-spacing: 1px;
+
+    }
+
+}
