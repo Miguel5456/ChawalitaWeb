@@ -2933,3 +2933,417 @@ body{
     }
 
 }
+
+/* =====================================
+   BOTÓN SECRETO
+===================================== */
+
+#boton-secreto {
+
+    display: block;
+
+    margin: 28px auto 0;
+
+    padding: 5px 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: rgba(116, 84, 141, 0.12);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+
+}
+
+#boton-secreto:hover {
+
+    color: rgba(116, 84, 141, 0.45);
+
+    transform: scale(1.2);
+
+}
+
+
+/* =====================================
+   MODAL SECRETO
+===================================== */
+
+.modal-secreto {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(45, 30, 60, 0.45);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    z-index: 9999;
+
+}
+
+
+/* =====================================
+   MODAL OCULTO
+===================================== */
+
+.modal-secreto.oculto {
+
+    display: none;
+
+}
+
+
+/* =====================================
+   CAJA DEL SECRETO
+===================================== */
+
+.caja-secreta {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    padding: 45px 35px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 70px rgba(55, 35, 75, 0.25);
+
+    position: relative;
+
+    animation:
+        aparecerSecreto 0.45s ease;
+
+}
+
+
+/* =====================================
+   ANIMACIÓN DE ENTRADA
+===================================== */
+
+@keyframes aparecerSecreto {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =====================================
+   PEQUEÑO CORAZÓN
+===================================== */
+
+.caja-secreta::before {
+
+    content: "♥";
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 25px;
+
+    color: #b994c9;
+
+    animation: latidoSecreto 1.8s infinite;
+
+}
+
+
+@keyframes latidoSecreto {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.18);
+
+    }
+
+}
+
+
+/* =====================================
+   TÍTULO
+===================================== */
+
+.caja-secreta h2 {
+
+    margin: 0 0 10px;
+
+    color: #5d4675;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================
+   TEXTO
+===================================== */
+
+.caja-secreta > p {
+
+    margin: 0 0 20px;
+
+    color: #806b91;
+
+    font-size: 15px;
+
+    font-weight: 300;
+
+}
+
+
+/* =====================================
+   INPUT CONTRASEÑA
+===================================== */
+
+#input-password {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 20px;
+
+    border: 2px solid #eadff2;
+
+    border-radius: 16px;
+
+    outline: none;
+
+    background: #faf7fc;
+
+    color: #5d4675;
+
+    text-align: center;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    letter-spacing: 8px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+}
+
+#input-password:focus {
+
+    background: white;
+
+    border-color: #b99acb;
+
+    box-shadow:
+        0 0 0 4px rgba(185, 154, 203, 0.15);
+
+}
+
+
+/* =====================================
+   BOTÓN ENTRAR
+===================================== */
+
+#btn-password {
+
+    margin-top: 18px;
+
+    padding: 13px 32px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: #74548d;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(116, 84, 141, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+}
+
+#btn-password:hover {
+
+    transform: translateY(-3px);
+
+    background: #67487e;
+
+    box-shadow:
+        0 12px 25px rgba(116, 84, 141, 0.3);
+
+}
+
+#btn-password:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================
+   BOTÓN CERRAR
+===================================== */
+
+.cerrar-secreto {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #9a87a5;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+.cerrar-secreto:hover {
+
+    background: #f1e9f5;
+
+    color: #5d4675;
+
+    transform: rotate(90deg);
+
+}
+
+
+/* =====================================
+   MENSAJE DE ERROR
+===================================== */
+
+#error-password {
+
+    min-height: 22px;
+
+    margin: 15px 0 0;
+
+    color: #a66b91;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+}
+
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 600px) {
+
+    .caja-secreta {
+
+        padding: 40px 25px;
+
+        border-radius: 25px;
+
+    }
+
+    .caja-secreta h2 {
+
+        font-size: 22px;
+
+    }
+
+    #input-password {
+
+        font-size: 21px;
+
+        letter-spacing: 6px;
+
+    }
+
+}

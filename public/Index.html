@@ -57,7 +57,7 @@
         </h2>
 
         <p>
-            Desde aquel 7 de julio...
+            Desde aquel 7 de Julio...
         </p>
 
         <div id="tiempo-juntos">
@@ -89,9 +89,57 @@
 
         </div>
 
+
+        <!-- ===========================
+             BOTÓN SECRETO
+        ============================ -->
+
+        <button
+            id="boton-secreto"
+            aria-label="Secreto">
+
+            ♥
+            
+        </button>
+
     </div>
 
 </section>
+
+<div id="modal-secreto" class="modal-secreto oculto">
+
+    <div class="caja-secreta">
+
+        <button id="cerrar-secreto" class="cerrar-secreto">
+            ×
+        </button>
+
+        <h2>
+            Estas Apunto de Entrar a un lugar secreto... 💜
+        </h2>
+
+        <p>
+            Digite la contraseña
+        </p>
+
+        <input
+            type="password"
+            id="input-password"
+            maxlength="4"
+            placeholder="••••"
+        >
+
+        <button id="btn-password">
+            Entrar
+        </button>
+
+        <p id="error-password"></p>
+
+    </div>
+
+</div>
+
+<script src="js/index.js"></script>
 
 <section id="sobre-camila">
 

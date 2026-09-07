@@ -218,3 +218,121 @@ setInterval(
     1000
 
 );
+
+/* ===========================
+   SECRETO DEL CONTADOR 💜
+=========================== */
+
+const botonSecreto =
+    document.getElementById("boton-secreto");
+
+const modalSecreto =
+    document.getElementById("modal-secreto");
+
+const cerrarSecreto =
+    document.getElementById("cerrar-secreto");
+
+const inputPassword =
+    document.getElementById("input-password");
+
+const btnPassword =
+    document.getElementById("btn-password");
+
+const errorPassword =
+    document.getElementById("error-password");
+
+
+/* ===========================
+   ABRIR
+=========================== */
+
+botonSecreto.addEventListener(
+    "click",
+    () => {
+
+        modalSecreto.classList.remove("oculto");
+
+        inputPassword.value = "";
+
+        errorPassword.textContent = "";
+
+        setTimeout(() => {
+
+            inputPassword.focus();
+
+        }, 100);
+
+    }
+);
+
+
+/* ===========================
+   CERRAR
+=========================== */
+
+cerrarSecreto.addEventListener(
+    "click",
+    () => {
+
+        modalSecreto.classList.add("oculto");
+
+    }
+);
+
+
+/* ===========================
+   COMPROBAR
+=========================== */
+
+function comprobarPassword(){
+
+    const password =
+        inputPassword.value.trim();
+
+    if(password === "0707"){
+
+        window.location.href =
+            "Mes2.html";
+
+    }
+
+    else{
+
+        errorPassword.textContent =
+            "Contraseña incorrecta. Inténtalo de nuevo. 💜";
+
+        inputPassword.value = "";
+
+        inputPassword.focus();
+
+    }
+
+}
+
+
+/* ===========================
+   BOTÓN
+=========================== */
+
+btnPassword.addEventListener(
+    "click",
+    comprobarPassword
+);
+
+
+/* ===========================
+   ENTER
+=========================== */
+
+inputPassword.addEventListener(
+    "keydown",
+    (event) => {
+
+        if(event.key === "Enter"){
+
+            comprobarPassword();
+
+        }
+
+    }
+);
